@@ -9,7 +9,7 @@ var	inDownState = 0;
 $(document).ready(function() 
 {
 	$("#splash_body").hide();
-	setTimeout("hideFirst()", 500);		
+	setTimeout("hideFirst()", 2000);		
 	init();
 });
 
@@ -129,13 +129,13 @@ function showTimeValue(timeval)
 function play(){
   var video1 = document.getElementById("video1");  
   video1.src="http://192.168.0.23/www/travelsleep_full.mp3";
- // video1.load();
+
   video1.play();   
 }  
 function pause(){
   var video1 = document.getElementById("video1");   
- // video1.pause();
-  setTimeout('video1.load()', 1000);
+   setTimeout("video1.load()", 2000);
+  //video1.pause();
 }   
 
 function timeclock(){
@@ -148,8 +148,6 @@ function timeclock(){
 
   second = second-1;
   munite	=	parseInt(second / 60);
-  //console.log(munite);
   showTimeValue(munite);
-  //console.log(">>>>>>" + second);
   setTimeout("timeclock()", 1000);
 }

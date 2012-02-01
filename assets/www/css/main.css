@@ -4,15 +4,18 @@ a:visited { text-decoration: none;}
 a:active { text-decoration: none;}
 a:hover {text-decoration:none;}
 
-
+body
+{
+	border: 0px solid red;	
+}
 
 #first_body
 {
-	margin-left:0px;
-	margin-top:0px;
 	width:320px;
-	height:480px;
+	height:100%;
 	background: url('../images/1/default.png');
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 	border: 0px solid red;
 	z-index:1004;	
 	position:absolute;
@@ -21,12 +24,12 @@ a:hover {text-decoration:none;}
 /* Second */
 #splash_body
 {
-	margin-left:0px;
-	margin-top:0px;
 	width:320px;
-	height:480px;
+	height:100%;
 	position:absolute;
 	background: url('../images/1/splash.png');
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 	z-index:100;
 	border: 0px solid red;	
 }
@@ -78,7 +81,9 @@ a:hover {text-decoration:none;}
 	margin-left:0px;
 	margin-top:0px;
 	width:320px;
-	height:480px;
+	height:100%;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 	border: 0px solid red;
 	position:absolute;
 }
@@ -90,7 +95,9 @@ a:hover {text-decoration:none;}
 	margin-top:0px;
 	border: 0px solid red;
 	width:320px;
-	height:480px;
+	height:100%;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 	position:absolute;
 	z-index:200;
 	overflow:hidden;
@@ -99,9 +106,11 @@ a:hover {text-decoration:none;}
 #act_body .mainbkg
 {
 	width:320px;
-	height:480px;
+	height:100%;
 	border: 0px solid black;
 	background: url('../images/1/bg-01.png');
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 	z-index:201;	
 	position:absolute;
 }
