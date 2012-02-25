@@ -66,7 +66,7 @@ function act_continue()
 	else
 	{
 		$("#act_body").find(".btn_end").hide();
-		console.log("111");
+		//console.log("111");
 		setTimeout("MoveClouds()", 500);
 	}
 }
@@ -82,7 +82,7 @@ function sleep_set(flag)
 
 		$("#act_body").find(".btn_end").show();
 
-		play();
+		playAudio('/android_asset/travelsleep_full.mp3')
 		end	=	0;
 		second = $("#timebar").val()  * 60 ;
 		timeclock();
@@ -99,7 +99,7 @@ function sleep_set(flag)
 		//document.getElementById("MoveSheep").style.WebkitAnimationPlayState="paused";
 		//$("#MoveSheep").hide();
 		//$("#MoveSheep").css("WebkitAnimationPlayState","paused");
-		pause();
+		stopAudio();
 		end	=	1;
 	}
 }
@@ -126,21 +126,10 @@ function showTimeValue(timeval)
 	$(".msg_body").html(timeval + " mins");
 }
 
-function play(){
-  var video1 = document.getElementById("video1");  
-  video1.src="http://192.168.0.23/www/travelsleep_full.mp3";
-
-  video1.play();   
-}  
-function pause(){
-  var video1 = document.getElementById("video1");   
-   setTimeout("video1.load()", 2000);
-  //video1.pause();
-}   
 
 function timeclock(){
   if ((second < 1)) {	//count down
-	pause();
+	stopAudio()
 	console.log("pause");
 	return false;
   }
@@ -151,3 +140,20 @@ function timeclock(){
   showTimeValue(munite);
   setTimeout("timeclock()", 1000);
 }
+
+
+
+
+/*
+function play(){
+  var video1 = document.getElementById("video1");  
+  video1.src="travelsleep_full.ogg";
+
+  video1.play();   
+}  
+function pause(){
+  var video1 = document.getElementById("video1");   
+   setTimeout("video1.load()", 2000);
+  //video1.pause();
+}   
+*/
